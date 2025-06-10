@@ -1,0 +1,106 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  background: 
+    linear-gradient(-45deg, rgba(30,60,114,0.6), rgba(42,82,152,0.6), rgba(30,60,114,0.6)),
+    url('https://pvmlumding.com/wp-content/uploads/2021/01/school.jpg') no-repeat center center fixed;
+  background-size: cover;
+  animation: bgSlide 20s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main App Container */
+#app {
+  width: 100%;
+  padding: 30px;
+}
+
+/* Card Styles */
+#login, #register, #content, .card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  max-width: 480px;
+  margin: 20px auto;
+  padding: 2.5rem;
+  animation: fadeInCard 0.8s ease-out;
+}
+
+/* Forms */
+form input, form select, form button {
+  width: 100%;
+  padding: 0.75em;
+  margin-bottom: 15px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+form button {
+  background-color: #1e3c72;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #163b60;
+  transform: scale(1.03);
+}
+
+/* Headings & Tabs */
+h2, h3 {
+  color: #1e3c72;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  margin-right: 10px;
+  padding: 6px 12px;
+  background: rgba(30, 60, 114, 0.85);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.tab:hover {
+  background: rgba(30, 60, 114, 1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #444;
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bgSlide {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
